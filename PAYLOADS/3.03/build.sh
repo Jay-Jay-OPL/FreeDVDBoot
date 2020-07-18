@@ -13,7 +13,8 @@ ENTRY=0x01fff9a8
 echo $ENTRY
 echo "Building crt0"
 
-ee-gcc -Ttext=0x01500014 -DENTRY=$ENTRY crt0.S -o fullpayload.elf -nostartfiles -nostdlib -ffreestanding -Wl,-z,max-page-size=0x1
+ee-gcc -Ttext=0x015FFF34 -DENTRY=$ENTRY crt0.S -o fullpayload.elf -nostartfiles -nostdlib -ffreestanding -Wl,-z,max-page-size=0x1
 ee-objcopy -O binary fullpayload.elf fullpayload.bin -Wl,-z,max-page-size=0x1
 
-echo "Done. Insert fullpayload.bin into VIDEO_TS.IFO at offset 0x2954"
+# todo make all this hex editing automatic
+echo "Done. fullpayload.bin at 0x0e8c, and payload.bin at 0x3000"

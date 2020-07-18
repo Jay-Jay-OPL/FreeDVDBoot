@@ -1,11 +1,8 @@
-# OK, so in the hybrid disc, 3.10 stage 2 is at 0x3000 as normal, but 3.11 stage 2 is modified to start at 0x38000
-# that's why we need to modify this file, just the LBA load on line 31 and the padding
-
 .set noreorder # If we're writing assembly, why would we want this?
 
 .section .text.startup
 
-.equ getBufferInternal, 0x2986a0
+.equ getBufferInternal, 0x262360
 .equ payload, (0x2000000 - 0x800) # End of RAM
 
 .global _start
@@ -28,7 +25,7 @@ ExecPS2:
 load:
 	la $a0, 0
 	la $a1, 0 # 0 = VIDEO_TS.IFO, 1 = VTS_01_0.IFO
-	la $a2, 0x3800 / 0x800 # lba offset in file
+	la $a2, 0x3000 / 0x800 # lba offset in file
 	la $a3, payload # Destination
 	la $t0, 0x800 / 0x800 # Count
 	la $t1, 0
@@ -55,11 +52,3 @@ boot:
 	la $v0, ENTRY
 	j $v0
 	nop
-
-#.space (_start + 0x2fe2 - 0x2954) - .
-#fpIndex:
-#	.byte 0xfa
-#	.byte 0xdc
-
-#.space (_start + 0x3000 - 0x2954) - .
-#.incbin "payload.bin"

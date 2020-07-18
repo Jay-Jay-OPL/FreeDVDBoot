@@ -6,15 +6,15 @@
 
 #define min(a, b) (((a) < (b)) ? (a) : (b))
 
-#define pointToIFO ((void (*)(unsigned int index, unsigned int lba, unsigned int offset))0x258a28)
-#define getDiscData ((void (*)(unsigned int s, void *d))0x258b98)
+#define pointToIFO ((void (*)(unsigned int index, unsigned int lba, unsigned int offset))0x2432c8)
+#define getDiscData ((void (*)(unsigned int s, void *d))0x243438)
 
-#define SifIopReset ((int (*)(char *, int))0x20e7d8)
-#define SifIopSync ((int (*)(void))0x20e958)
-#define SifInitRpc ((void (*)(int))0x208d80)
-#define SifExitRpc ((void (*)(void))0x208f20)
+#define SifIopReset ((int (*)(char *, int))0x291fb8)
+#define SifIopSync ((int (*)(void))0x292138)
+#define SifInitRpc ((void (*)(int))0x2082a0)
+#define SifExitRpc ((void (*)(void))0x208440)
 
-#define getBufferInternal ((int (*)(void *filename, int type, int currentSector, void *dest, unsigned int sectorsRemaining, int curReadPos))0x2952f0)
+#define getBufferInternal ((int (*)(void *filename, int type, int currentSector, void *dest, unsigned int sectorsRemaining, int curReadPos))0x262360)
 
 #define ELF_PT_LOAD 1
 
