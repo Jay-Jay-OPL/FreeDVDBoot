@@ -46,9 +46,11 @@ Other suggestions that worked for others:
 
 - Try removing all memory cards. Apparently [that solved the issue for this user](https://github.com/CTurt/FreeDVDBoot/issues/3#issuecomment-651970564).
 
-- Try burning with different software. Apparently [for this user](https://github.com/CTurt/FreeDVDBoot/issues/108) ImgBurn didn't work, but CDBurnerXP with 1x speed, compatibility settings, and finalize option worked.
+- Try burning with different software. Apparently [for this user](https://github.com/CTurt/FreeDVDBoot/issues/108) and [this user](https://github.com/CTurt/FreeDVDBoot/issues/124#issuecomment-661231776) ImgBurn didn't work, but CDBurnerXP with 1x speed, compatibility settings, and finalize option worked.
 
 - Check that your console's language is set to English.
+
+- Check the GitHub repo to see if the image has been updated recently. Download the new one if it has.
 
 **Please, only open a GitHub issue if you have read and tried all of the above. If you do open an issue, please confirm that you tried a real DVD movie and it worked on your system so that we know it's not just a laser failure; also include your DVD player version, the name of the ISO you tried, the type of DVD, and what happens when you launch the disc.**
 
@@ -62,9 +64,7 @@ Boot your PlayStation 2 without any disc inserted, and press Triangle to identif
 
 **Currently only support:**
 
-- 3.03 (tested only region E in emulator as other BIOS versions aren't available to me, but guess other regions will work - any language),
 - 3.04 (tested only region M in emulator so far, but guess most other regions EUMACDG, except for J will work - with English language set in settings),
-- 3.04 (J region only - use the "All Slim PS2s" image - with English language set in settings),
 
 ### Step 2: Download the ISO
 Download the ISO that corresponds to your firmware version.
